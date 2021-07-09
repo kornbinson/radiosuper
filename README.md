@@ -4,7 +4,7 @@
 
 Esta aplicación fue diseñada con el propósito de mantener informada y actualizada  a la comunidad,  sobre las últimas noticias del Cauca,  Popayán y sus alrededores, también puedes deleitarte con el mejor streaming de Radio Súper y estar al tanto de las noticias más relevantes a nivel nacional. Puedes descargarla la aplicación directamente desde la play store nos encuentras como [Radio Super Popayan](https://play.google.com/store/apps/details?id=com.ionicframework.radioapp973188&hl=es_CO&gl=US) o dando click en el siguiente enlace [aqui](https://play.google.com/store/apps/details?id=com.ionicframework.radioapp973188&hl=es_CO&gl=US)
 
-Te invitamos a ver nuestra pagina web en 
+Te invitamos a visitar nuestra pagina web en 
 `<link>` : <http://www.radiosuperpopayan.com/>
 
 
