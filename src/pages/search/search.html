@@ -1,0 +1,58 @@
+<!--
+  Generated template for the Search page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar>   
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button> 
+    <ion-title><img src="img/logo-radio-super-header.svg" height="30"/></ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="search-page">
+
+  <div class="app-search-form">
+    <ion-searchbar 
+        placeholder="Buscar ..."  
+        animated="true"
+        [(ngModel)]="searchKeyword"
+        (keyup.enter)="search(searchKeyword, $event)"
+        (ionInput)="onCancel($event)"        
+    >
+    </ion-searchbar>
+  </div>
+
+  <!-- Search Results Section -->
+  <div class="mini-post-section search-section">
+    <div class="mini-post-section">
+      <h6 class="mini-post-section--title">Resultados de Busqueda</h6>            
+        <ion-list class="mini-post-list" >
+            <!-- Singular Item -->
+              <ion-item *ngFor="let post of datas" (click)="openSingle(post._links.self[0], post.id)">  
+                  <!-- Content Image and Title -->
+                  <ion-thumbnail item-left>
+                    <div *ngIf="post._embedded['wp:featuredmedia']">
+                        <div *ngFor="let thumbnail of post._embedded['wp:featuredmedia']">               
+                            <img *ngIf="thumbnail.source_url" [src]="thumbnail.source_url" class="feed-image">              
+                        </div>
+                    </div>
+                    <div *ngIf="!post._embedded['wp:featuredmedia']">
+                      <img src="img/no-image.jpg" class="feed-image">
+                    </div>
+                  </ion-thumbnail>                                  
+                  <h1 class="primary-font" [innerHTML]="post.title.rendered"></h1>                         
+                  <div class="post-search-contenido continuara-noticia" [innerHTML]="post.excerpt.rendered | slice:0:30"></div>
+              </ion-item>  
+          </ion-list>
+    </div>
+  </div>
+  <!-- End Search Results Section -->
+
+</ion-content>

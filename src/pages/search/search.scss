@@ -1,0 +1,73 @@
+.search-page {
+  background-color: #fff;
+  .mini-post-section {
+    background-color: #fff;
+  }
+  h1 {
+    color: #222 !important;
+  }
+  h6.mini-post-section--title {
+    color: #222;
+  }
+ 
+}
+.post-search-contenido {
+  p {
+      @extend .secondary-font;
+      color: white !important;      
+  }
+  
+ 
+  
+}
+.app-search-form {
+  background-color: #f5f5f5;
+  h6 {
+  }
+  label {
+  }
+  ion-searchbar {
+    padding: 12px 0px;
+    background-color: $primary-color;    
+    .searchbar-search-icon {
+      background: url('../img/search-icon.svg') no-repeat top left;          
+      background-size: 19px 36px;
+      margin-left: 20px;
+      padding: 15px;
+      top: -2px;
+      left: 0px;
+    }
+    
+    .searchbar-input-container input.searchbar-input {
+      @extend .secondary-font;   
+      font-family: 'Roboto', sans-serif;  
+      font-size: large; 
+      padding: 1px 0 0 60px;
+      color: white;
+      font-weight: 100;
+                 
+    }
+    .searchbar-input-container .searchbar-input{
+      box-shadow: none;           
+      background-color: $primary-color;
+      &::-webkit-input-placeholder { /* WebKit browsers */
+          color: #ddd;
+      }
+      &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          color: #ddd;
+      }
+      &::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color: #ddd;
+      }
+      &:-ms-input-placeholder { /* Internet Explorer 10+ */
+          color: #ddd;
+      } 
+    }
+  }
+}
+
+.continuara-noticia {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

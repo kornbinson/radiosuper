@@ -1,0 +1,107 @@
+.post-feed {
+  position: relative;
+  padding: 0 15px;
+  overflow:hidden !important;
+  margin-bottom: 15px;
+
+  &:nth-child(odd) {
+    background-color: #fff;
+  }
+  &:nth-child(even) {
+    background-color: #fff;
+  }
+  .feed-image {
+    width: 100%;
+    height: 85vw;
+    display: block;
+    background-size: cover;
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+  }
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 100%; min-height: 100%;
+    background: transparentize(#fff, 0.7);
+    content: ''
+  }
+  .post-feed-category {
+    font-family: 'Roboto', sans-serif;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    background: linear-gradient(to left, rgba(2,8,51, 0.2), rgba(2,8,51,0)); /* Standard */
+    background: webkit-linear-gradient(to left, rgba(2,8,51, 0.2), rgba(2,8,51,0)); 
+    padding: 1px 5px 0 0;
+    top: 60%;
+    text-align: right;
+    width: calc(100%);
+    left: -43%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 3px;
+    &:before {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+  .post-feed-title {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 100;
+    position: absolute;
+    bottom: -10px;
+    padding: 50px 30px 16px;
+    border-right: 15px solid #fff;
+    color: #f8f8f8;
+    background: -webkit-linear-gradient(to top, rgba(0,0,0, 0.7), rgba(2,8,51,0)); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(to top, rgba(0,0,0, 0.7), rgba(2,8,51,0)); /* Standard */
+    font-size: 2.2rem !important;
+		@include breakpoint($iphone6) {
+			font-size: 3.0rem;
+		}
+    line-height: 1.0;
+  }
+  .post-feed-contenido {
+    position: absolute !important;
+    bottom: 40px;
+    padding: 10px 50px 10px 50px;
+    color: white;    
+    line-height: 1.0;      
+    max-height: 7em;     
+  }
+  .post-feed-button {
+    position: absolute;
+    right: 10px;
+    color: white;
+    bottom: 10px;
+    span.button-inner ion-icon {
+      &.ion-ios-more {
+      }
+
+      &.ion-md-more {
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+
+.continuara-texto {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cabecera {
+  padding: 15px;
+}
+
+iframe.envivo{
+  border: none;
+  width: 180px;
+  height: 100px;
+}

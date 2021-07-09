@@ -1,0 +1,19 @@
+.app-form {
+  button {
+    @extend .secondary-font;
+    text-transform: uppercase;
+  }
+  .list .item.item-input input,
+  .list .item.item-input textarea {
+    @include breakpoint($iphone6) {
+      font-size: 1.2rem;
+    }
+    @extend .secondary-font;
+  }
+
+  .list .item.item-input textarea {
+    padding-top: 10px;
+    min-height: 150px;
+  }
+
+}

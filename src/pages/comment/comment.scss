@@ -1,0 +1,65 @@
+// Comment Style
+.mini-post-section.comment-block {
+  padding:5px 0;
+  .mini-post-list .list {
+    .item.item-thumbnail-left {
+      padding-left: 90px;
+      border-bottom: 1px solid transparent !important;
+      padding-bottom: 0;
+      min-height: 90px !important;
+      .item-content {
+      }
+      img:first-child {
+        max-width: 60px;
+        max-height: 60px;
+      }
+    }
+    h1 {
+      font-size: 15px;
+      padding-top: 5px;
+      @extend .secondary-font.light-weight;
+    }
+  }
+}
+
+.mg-comment-section {
+  padding: 0 20px 20px 20px;
+  button {
+    margin: 10px 0;
+  }
+}
+.mg-comment {
+  hr {
+    border-color: rgba(241, 241, 241, 0.3);
+  }
+  &:nth-child(odd) {
+    background: #edecec;
+  }
+  &:nth-child(odd) {
+    background: transparentize(#edecec, 0.3);
+  }
+  h5 {
+    margin: 12px 0 3px 0;
+    @extend .secondary-font;
+  }
+  h6 {
+    @extend .secondary-font.light-weight;
+    margin:0 0 10px 0 !important;
+    color: transparentize(black, 0.5);
+  }
+  .comment-content, .comment-content p {
+    @extend .secondary-font.light-weight;
+    color: #636363;
+  }
+  padding: 1px 15px 15px 15px;
+}
+
+.bar.bar-footer.comment-bar {
+  padding: 0 10px !important;
+  button {
+    background-color: $primary-color;
+    color: white;
+    @extend .secondary-font;
+    text-transform: uppercase;
+  }
+}

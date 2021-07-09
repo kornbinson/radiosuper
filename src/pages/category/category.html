@@ -1,0 +1,41 @@
+<!--
+  Generated template for the Category page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+</ion-header>
+
+<ion-content class="category">
+<!-- Category Box Title with background image -->
+    <div class="category-box">
+      <ion-icon name="arrow-back" class="mg-back-button" (click)="goBackAction()"></ion-icon>          
+      <img src="img/category-banner.jpg" class="banner-image">
+      <h1 class="text-center">Categorias</h1>
+      <h6 class="category-label">Resultados</h6>
+    </div>
+    <!-- End Category -->
+
+    <!-- Category Items -->
+    <div class="category-content">
+      <div class="mini-post-section category-view">
+       <ion-list class="mini-post-list" *ngIf="datas">   
+          <div *ngFor="let category of datas" >         
+            <ion-item *ngIf="category.id  !== 5784 &&
+                             category.id  !== 5787 &&
+                             category.id  !== 5783 &&
+                             category.id  !== 5788 &&
+                             category.id  !== 5785
+                            "
+            (click)="openCategory(category)">
+              <h1 class="primary-font">{{ category.name | uppercase }}</h1>
+            </ion-item>
+          </div>          
+       </ion-list>
+      </div>
+    </div>
+    <!-- Category Items -->
+
+</ion-content>

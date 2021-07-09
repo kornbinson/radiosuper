@@ -1,0 +1,11 @@
+{
+  "name": "RadioApp",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/wp-json",
+      "proxyUrl": "http://radiosuperpopayan.com/wp-json"
+    }
+  ],
+  "type": "ionic-angular"
+}

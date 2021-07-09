@@ -1,0 +1,149 @@
+.single-post {
+  position: relative;
+  &:nth-child(odd) {
+    background-color: #fff;
+  }
+  &:nth-child(even) {
+    background-color: #fff;
+  }
+  .feed-image {
+    width: 100%;
+    height: 100vw;
+    display: block;
+    background: url('../assets/preloader.gif') no-repeat;
+    background-size: cover;
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+  }
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 100%; min-height: 100%;
+    background: transparentize(#434343, 0.5);
+    content: ''
+  }
+  .close-post-button {
+    position: absolute;
+    top: 20px;
+    left: 6%;
+    ion-icon {
+      font-size: 4rem;
+      color: white;
+      font-weight: bold;
+    }
+  }
+  .app-feed-category {
+    font-family: 'Roboto', sans-serif;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 45%;
+    padding: 1px 0 0 30px;
+    background: linear-gradient(to left, rgba(2,8,51, 0), rgba(2,8,51,0.3)); /* Standard */
+    background: webkit-linear-gradient(to left, rgba(2,8,51, 0), rgba(2,8,51,0.3)); 
+    width: calc(100%);
+    left: -43%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 6px;
+    &:before {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+  h1,h2,h3,h4,h5,h6 {
+    color: white;
+  }
+  .app-feed-title {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 50px 10px 50px;
+    color: white;
+    background: -webkit-linear-gradient(to top, rgba(0,0,0, 0.7), rgba(2,8,51,0)); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(to top, rgba(0,0,0, 0.7), rgba(2,8,51,0)); /* Standard */
+    h6 {
+      font-size: 13px;
+    }
+    .post-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 3.0rem;
+      line-height: 1.0;
+      color: white;
+      font-weight: 300;
+      @include breakpoint($iphone6Plus) {
+  			font-size: 4.0rem;
+  		}
+    }
+  }
+  .app-feed-date {
+    position: absolute;
+    right: 20px;
+    color: white;
+    top: 20px;
+    background: #DC173A;
+    padding: 10px;
+    
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      margin:0;
+      font-size: 2.8rem;
+      font-weight: 400;
+    }
+    h6 {
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      margin-top: -6px;
+      font-weight: 100;
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      margin: 0;
+      margin-top: -6px;
+      font-size: 0.7em;
+      font-weight: 100;
+    }
+  }
+  .share-post-button {
+    position: absolute;
+    bottom: 16px;
+    color: white;
+    right: 24px;
+    font-size: 3rem;
+  }
+}
+
+.post-content {
+  padding: 26px 19px 0 19px;
+  @extend .secondary-font.light-weight; // app/theme/app.fonts.scss
+  line-height: 2.6rem;
+  font-size: 1.6rem;
+  p {
+    line-height: 2.8rem;
+    font-size: 1.9rem;
+  }
+  .post-author {
+    // @extend .padding-vertical;
+    color: transparentize(black, 0.3);
+  }
+  .post-social-stats {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    ion-icon {
+      padding-right: 3px;
+      font-size: 2.1rem;
+      color: #747474;
+    }
+    span.post-stat {
+      font-size: 2.0rem;
+      @extend .secondary-font.semi-bold;
+      color: #747474;
+    }
+  }
+}

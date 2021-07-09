@@ -1,0 +1,136 @@
+<ion-menu [content]="content" class="app-sidemenu">
+
+  <ion-toolbar>
+      <!-- Menu Play Radio -->  
+    <div class="cover load-transition load-transition-delay-1">
+      <div class="glow load-transition load-transition-delay-2"></div>
+      <div class="radio-logo-content">
+        <img src="img/logo-radio-super.svg" alt="" class="radio-logo-super">
+      </div>
+      <!--<div class="current-station-text load-transition load-transition-delay-2">Popayán 1070 A.M.</div>-->
+      <div class="current-station-name-bar load-transition load-transition-delay-2">                    
+        <audio-track #track [track]="singleTrack" class="right-action">        
+          <audio-track-play [audioTrack]="track" (click)="playRadio()">         
+            </audio-track-play>   
+        </audio-track>
+      </div>
+      <div class="sound-bars" [ngClass] = "{'stop-radio' : !radioOn}">
+            <div class="bar wave-1"></div>
+            <div class="bar wave-2"></div>
+            <div class="bar wave-3"></div>
+            <div class="bar wave-4"></div>
+            <div class="bar wave-5"></div>
+            <div class="bar wave-6"></div>
+            <div class="bar wave-7"></div>
+            <div class="bar wave-8"></div>
+            <div class="bar wave-9"></div>
+            <div class="bar wave-10"></div>
+            <div class="bar wave-1"></div>
+            <div class="bar wave-2"></div>
+            <div class="bar wave-3"></div>
+            <div class="bar wave-4"></div>
+            <div class="bar wave-5"></div>
+            <div class="bar wave-6"></div>
+            <div class="bar wave-7"></div>
+            <div class="bar wave-8"></div>
+            <div class="bar wave-9"></div>
+            <div class="bar wave-10"></div>
+            <div class="bar wave-1"></div>
+            <div class="bar wave-2"></div>
+            <div class="bar wave-3"></div>
+            <div class="bar wave-4"></div>
+            <div class="bar wave-5"></div>
+            <div class="bar wave-6"></div>
+            <div class="bar wave-7"></div>
+            <div class="bar wave-8"></div>
+            <div class="bar wave-9"></div>
+            <div class="bar wave-10"></div>
+            <div class="bar wave-1"></div>
+            <div class="bar wave-2"></div>
+            <div class="bar wave-3"></div>
+            <div class="bar wave-4"></div>
+            <div class="bar wave-5"></div>
+            <div class="bar wave-6"></div>
+            <div class="bar wave-7"></div>
+            <div class="bar wave-8"></div>
+            <div class="bar wave-9"></div>
+            <div class="bar wave-10"></div>
+            <div class="bar wave-1"></div>
+            <div class="bar wave-2"></div>
+            <div class="bar wave-3"></div>
+            <div class="bar wave-4"></div>
+            <div class="bar wave-5"></div>
+            <div class="bar wave-6"></div>
+            <div class="bar wave-7"></div>
+            <div class="bar wave-8"></div>
+            <div class="bar wave-9"></div>
+            <div class="bar wave-10"></div>
+          </div>
+
+    </div> 
+    <!-- Fin Menu Play Radio -->  
+  </ion-toolbar>
+  
+
+  <ion-content >
+    <!-- Opciones de Menu -->
+    <ion-scroll style="height: 800px">
+      <!-- Iconos Redes Sociales -->
+        <section class="effect-one">
+          <div class="box">
+            <a href="https://www.facebook.com/RadioSuperPopayan1070AM"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/SuperPopayan"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/+RadioSuperPopayán1070am"><i class="fa fa-google-plus" aria-hidden="true"></i></a>          
+          </div>
+        </section>
+      <!-- Fin Iconos Redes Sociales -->
+
+      <ion-list>
+        <ion-item menuClose (click)="openHome()">
+          <ion-icon ios="ios-home" md="md-home" item-left></ion-icon>
+          Inicio
+        </ion-item>
+        <ion-item menuClose (click)="openCategoryById(5790)">
+          <ion-icon ios="ios-paper-outline" md="ios-paper-outline" item-left></ion-icon>
+          Popayán
+        </ion-item>
+        <ion-item menuClose (click)="openCategoryById(5791)">
+          <ion-icon ios="ios-paper-outline" md="ios-paper-outline" item-left></ion-icon>
+          Cauca
+        </ion-item>
+        <ion-item menuClose (click)="openCategoryById(5792)">
+          <ion-icon ios="ios-paper-outline" md="ios-paper-outline" item-left></ion-icon>
+          Colombia
+        </ion-item>
+        <ion-item menuClose (click)="openCategoryById(5793)">
+          <ion-icon ios="ios-paper-outline" md="ios-paper-outline" item-left></ion-icon>
+          Lo que está pasando
+        </ion-item>
+        <ion-item menuClose (click)="openCategoryById(252)">
+          <ion-icon ios="ios-basketball-outline"  md="ios-basketball-outline" item-left></ion-icon>
+          Deportes 
+        </ion-item>      
+        <ion-item menuClose (click)="openCategoryById(5819)">
+          <ion-icon ios="ios-bookmark-outline" md="ios-bookmark-outline" item-left></ion-icon>
+          Destacadas
+        </ion-item>
+        <ion-item menuClose (click)="goToPodcast()" class="fondo-rojo">
+          <ion-icon ios="ios-play-outline" md="ios-play-outline" item-left></ion-icon>
+          Podcast
+        </ion-item>
+        <!--<ion-item menuClose (click)="openCategory()">
+          <ion-icon ios="ios-albums-outline" md="ios-albums-outline" item-left></ion-icon>
+          Todas las Categorias
+        </ion-item>-->
+        <ion-item menuClose (click)="openSearch()">
+          <ion-icon ios="ios-search" md="md-search" item-left></ion-icon>Buscar
+        </ion-item>      
+      </ion-list>
+    </ion-scroll>
+    <!-- Fin Opciones de Menu -->
+  </ion-content>
+</ion-menu>
+
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
