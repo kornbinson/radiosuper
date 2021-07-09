@@ -1,4 +1,4 @@
-# Aplicación Radio Super Popayán
+# Radio Super Popayán
 
 
 
